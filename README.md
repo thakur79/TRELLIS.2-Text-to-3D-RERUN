@@ -13,6 +13,20 @@
 - **Custom Theme**: OrangeRedTheme with responsive layout.
 - **Rich Examples**: 70+ image inputs and 60+ text prompts (cats, planes, cars, furniture, etc.).
 
+---
+
+<img width="1207" height="750" alt="Screenshot 2025-12-28 at 23-41-16 TRELLIS 2-Text-to-3D - a Hugging Face Space by prithivMLmods" src="https://github.com/user-attachments/assets/7c0d7eaf-36c3-4e52-9fbb-fb09e370cbce" />
+
+<img width="1207" height="750" alt="Screenshot 2025-12-28 at 23-37-13 TRELLIS 2-Text-to-3D - a Hugging Face Space by prithivMLmods" src="https://github.com/user-attachments/assets/97fd118e-aa96-480a-a05a-f4ba29dd3dea" />
+
+---
+
+https://github.com/user-attachments/assets/4e34bce8-7dc3-4cdc-a413-b170eb9eba93
+
+https://github.com/user-attachments/assets/a335d0af-21b2-4826-af81-902f2fafce9c
+
+---
+
 ## Prerequisites
 
 - Python 3.10 or higher.
